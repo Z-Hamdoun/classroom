@@ -1,6 +1,9 @@
 # Classroom
  
-A desktop app (built with [Kivy](https://kivy.org)) for tracking a class of 28 students across two semesters: per-student grades, a profile page per student, and class-wide statistics (averages, rankings) rendered with matplotlib.
+A desktop and mobile app (built with [Kivy](https://kivy.org)) for tracking a class of 28 students across two semesters: per-student grades, a profile page per student, and class-wide statistics (averages, rankings) rendered with matplotlib.
+
+## Context
+I built this app (and never got time to polish it) after my Maths teacher in highschool (in 2021) asked me to find him an app that helps him manage his class on his phone, so that he can look up data on each student quickly during parent meetings.
  
 ## Features
  
@@ -61,3 +64,11 @@ python classroom.py
 - This project dates back to 2021, it was not coded with customization in mind so many aspects are hardcoded.
 - Chart rendering uses matplotlib's `Agg` backend, with figures converted to PNG and displayed as Kivy `Image` widgets — this avoids the old, unmaintained `kivy.garden.matplotlib` backend, which is incompatible with Python 3.12+ (relies on the removed `distutils` module).
 - `compute_moyennes()` in `database.py` references a `moyennes` table that isn't created by `StudentsDB.start()` — add that table before relying on saved edits to recompute class-wide exam averages.
+
+## Screenshots
+![Main menu](./assets/readme/menu_principal.png)
+![Averages per Exam](./assets/readme/moyennes_par_ctrl.png)
+![Overview](./assets/readme/overview.png)
+![Profile](./assets/readme/profile_eleve.png)
+![Column](./assets/readme/rangee.png)
+![Grades](./assets/readme/saisie_notes.png)
